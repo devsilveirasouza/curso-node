@@ -1,15 +1,12 @@
 import validator from 'validator';
-import Funcoes from './Matematica';// IMPORTANDO TUDO
-// import * as Funcoes from './funcoes';// IMPORTANDO TUDO
-// import { somar, multiplicar } from './funcoes';// IMPORTANTO COISAS ESPECIFICAS
 
-let n1: number = 10;
-let n2: number = 2;
-let ip = '197.198.0.50';
+let name: string = 'Wellington';
+let sobrenome = 'Souza';
 
-console.log(`SOMA:          ${Funcoes.somar(n1, n2)}`);
-console.log(`SUBTRAÇÃO:     ${Funcoes.subtrair(n1, n2)}`);
-console.log(`MULTIPLICAÇÃO: ${Funcoes.multiplicar(n1, n2)}`);
+if (validator.isLowercase(name)) {
+    console.log(`A string ${name} é toda minúscula.`);
+} else {
+    console.log(`A string ${name} não é toda minúscula.`);
+}
 
-console.log( validator.isEmail('suporte@gmail.com') );
-console.log( validator.isIP(ip) );
+console.log(`O nome completo é ${name} ${sobrenome}.`)
