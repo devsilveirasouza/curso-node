@@ -1,6 +1,8 @@
+const Funcoes = require('./funcoes');
+
 let n1: number = 10;
 let n2: number = 2;
 
-console.log(`SOMA: `);
-console.log(`SUBTRAÇÃO: `);
-console.log(`MULTIPLICAÇÃO: `);
+console.log(`SOMA:          ${Funcoes.somar(n1, n2)}`);
+console.log(`SUBTRAÇÃO:     ${Funcoes.subtrair(n1, n2)}`);
+console.log(`MULTIPLICAÇÃO: ${Funcoes.multiplicar(n1, n2)}`);
