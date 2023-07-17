@@ -1,4 +1,6 @@
-const Funcoes = require('./funcoes');
+import Funcoes from './Matematica';// IMPORTANDO TUDO
+// import * as Funcoes from './funcoes';// IMPORTANDO TUDO
+// import { somar, multiplicar } from './funcoes';// IMPORTANTO COISAS ESPECIFICAS
 
 let n1: number = 10;
 let n2: number = 2;
