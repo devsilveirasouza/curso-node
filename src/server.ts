@@ -1,32 +1,11 @@
 import express, { Request, Response } from 'express';
+// IMPORTANDO AS ROTAS
+import mainRouttes from './routes/index'
+import painelRoutes from './routes/painel'
 // SERVIDOR
 const server = express();
-// CONFIGURANDO A PÁGINA PRINCIPAL
-server.get('/', (req: Request, res: Response) => {
-    res.send('Olá TYPES-NODE');
-});
-
-const HomePage = (req: Request, res: Response) => {
-    res.send('Nova página...');
- };
-
- server.get('/nova-pagina', HomePage);
-// ROTA DINÂMICA
- server.get('/noticia/:slug', (req: Request, res: Response)=>{
-    let slug: string = req.params.slug;
-    res.send(`Notícia: ${slug}`);
- });
-// ROTA DINÂMICA
- server.get('/noticia/:slug', (req: Request, res: Response)=>{
-    let slug: string = req.params.slug;
-    res.send(`Notícia: ${slug}`);
- });
- server.get('/voo/:origem-:destino', (req: Request, res: Response)=>{
-    // let origem: string   = req.params.origem;
-    // let destino: string  = req.params.destino;
-    let { origem, destino } = req.params;
-
-    res.send(`Procurando Voo de ${origem.toUpperCase()} até ${destino.toUpperCase()}`);
- }); 
+// INFORMANDO O SERVIDOR AS ROTAS DE USO
+server.use(mainRouttes);
+server.use('/painel', painelRoutes);
 // DEFININDO A PORTA
 server.listen(80);
