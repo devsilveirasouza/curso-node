@@ -3,7 +3,10 @@ import { Router, Request, Response } from 'express';
 const router = Router();
 // DEFININDO AS ROTAS
 router.get('/', (req: Request, res: Response)=>{
-    res.send('Ola Mundo!');
+    // pegar os produtos do banco de dados
+    // organizar as informações desses produtos
+    // envia para o template engine
+    res.render('home');
 });
 
 router.get('/contato', (req: Request, res: Response)=>{

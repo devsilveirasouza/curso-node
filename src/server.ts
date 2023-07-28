@@ -1,12 +1,20 @@
 import express, { Request, Response } from 'express';
 import path from 'path';
+import mustache from 'mustache-express';
 
 // IMPORTANDO AS ROTAS
 import mainRouttes from './routes/index'
 import painelRoutes from './routes/painel'
 
-// SERVIDOR
+// CRIANDO O SERVIDOR
 const server = express();
+
+// SETANDO O MUSTACHE
+server.set('view engine', 'mustache');
+// INFORMANDO O CAMINHO DA PASTA
+server.set('views', path.join(__dirname, 'views'));
+// USANDO O MUSTACHE
+server.engine('mustache', mustache());
 
 // console.log( path.join(__dirname, '../public') );
 // DEFININDO ROTA DE ARQUIVOS ESTÁTICOS
