@@ -1,10 +1,12 @@
 // IMPORTANDO O EXPRESS
 const express = require('express')
 const app = express()
-const mysql = require("mysql"); // https://github.com/mysqljs/mysql npm install mysqljs/mysql
 
 const port = 3000
+
 app.use(express.json());
+
+const mysql = require("mysql"); // https://github.com/mysqljs/mysql npm install mysqljs/mysql
 
 const db = mysql.createConnection({
   host     : 'localhost',
@@ -17,7 +19,7 @@ app.get('/', (req, res) => {
     res.send('Hello World!')
   })
 
-  app.get("/users", (req. res) => {
+  app.get("/users", (req, res) => {
     const q = "SELECT * FROM users";
     db.query(q, (err, data) => {
       if (err) {
