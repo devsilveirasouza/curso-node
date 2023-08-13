@@ -1,7 +1,7 @@
-# CRUD with NODEJS
+# CRUD Nodejs com MySql
 
-Using: 
+Dependências: 
 
-express, https://expressjs.com/
+Express, https://expressjs.com/
 
-mysql, https://github.com/mysqljs/mysql
+MySql, https://github.com/mysqljs/mysql
