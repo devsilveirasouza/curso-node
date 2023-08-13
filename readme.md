@@ -13,4 +13,4 @@ Esta API conceito possui as quatro operações principais que é o CRUD.
 
 Nesta API é possível realizar o registro do nome das pessoas, listar todos os registros, listar apenas um registro, atualizar um registro e deletar um registro.
 
-##### devsilveirasouza@gmail.com
+##### dev.wsilveirasouza@gmail.com
